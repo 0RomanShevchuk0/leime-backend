@@ -14,7 +14,7 @@ export class MemesService {
   }
 
   findAll() {
-    return this.prismaService.meme.findMany();
+    return this.prismaService.meme.findMany({ orderBy: { id: 'asc' } });
   }
 
   findOne(id: number) {
